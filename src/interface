@@ -1,0 +1,40 @@
+#include <ncurses.h>
+#define LARGURA_TELA 24
+#define ALTURA_TELA 12
+
+int main() {
+    initscr();
+    cbreak(); // Desativa o buffering de linha, para que cada caractere seja exibido imediatamente
+    noecho(); // Desativa a exibição do caractere digitado
+
+
+    // Cria uma nova janela
+    WINDOW* tela = newwin(ALTURA_TELA, LARGURA_TELA, 0, 0); // (altura, largura, linha, coluna)
+
+    // Imprime uma mensagem na janela
+    mvwprintw(tela, "Olá, mundo!");
+
+    // Atualiza a janela para exibir as mudanças
+    wrefresh(tela);
+
+    // Espera uma tecla ser pressionada para sair
+    getch();
+
+    
+    endwin();
+    return 0;
+}
+
+
+// #include <ncurses.h>
+
+// int main()
+// {	
+//   initscr();			/* Start curses mode 		  */
+//   printw("Hello World !!!");	/* Print Hello World		  */
+//   refresh();			/* Print it on to the real screen */
+//   getch();			/* Wait for user input */
+//   endwin();			/* End curses mode		  */
+
+//   return 0;
+// }
