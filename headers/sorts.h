@@ -5,10 +5,10 @@ void insertionSort(int vet[], int tam);
 
 void selectionSort(int vet[], int tam);
 
-void quickSort(int vet[], int tam);
+void quickSort(int vetor[], int inicio, int fim);
 
-void mergeSort(int vet[], int tam);
+void mergeSort(int vet[], int inicio, int fim);
 
-void BubbleSort(int vet[], int tam);
+void bubbleSort(int vet[], int tam);
 
 #endif

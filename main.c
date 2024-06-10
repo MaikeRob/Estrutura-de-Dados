@@ -7,10 +7,10 @@
 
 int main(void) {
 
-  rand_int_array_t *entrada = geraArrayAleatoria(100, 50);
+  rand_int_array_t *entrada = geraArrayAleatoria(6, 10);
 
   imprimeNumeros(entrada->numeros, entrada->tamanho);
-  selectionSort(entrada->numeros, entrada->tamanho);
+  bubbleSort(entrada->numeros, entrada->tamanho);
   imprimeNumeros(entrada->numeros, entrada->tamanho);
 
   return 0;
